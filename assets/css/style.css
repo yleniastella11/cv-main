@@ -1,16 +1,14 @@
 header, footer {
-    block-size: 1160px;
+    block-size: 60%;
     display: block;
-    align-content: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header{
-    block-size: auto;
-    width: 65%;
+    width: 60%;
     color: white;
     text-align: center;
-    display: block;
-    justify-content: center;
     img {
         display: block;
         margin: auto;
@@ -45,7 +43,7 @@ header{
 main{
     block-size: auto;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     text-align: left;
     display: table;
     h2{
@@ -81,7 +79,6 @@ main{
     display: table-cell;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
         ul{
             color: black;
             background-color: white;
@@ -90,7 +87,7 @@ main{
 
 footer{
     block-size: auto;
-    width: 65%;
+    width: 60%;
     display: inline;
     float: inline-start;
     text-align: center;
