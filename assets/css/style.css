@@ -1,4 +1,4 @@
-header, footer {
+header, main, .hard-skills, footer {
     block-size: 60%;
     display: block;
     flex-direction: column;
@@ -32,10 +32,28 @@ header{
         font-size: large;
     }
 
-    address {
+    address a {
         color: white;
         background-color: #2c1d27;
+        display: inline;
+        justify-content: left;
+        text-align: left;
+        font-size: medium;
+    }
+    address a{
+        color: white;
+        background-color: #2c1d27;
+        display: inline;
+        justify-content: center;
         text-align: center;
+        font-size: medium;
+    }
+    address a{
+        color: white;
+        background-color: #2c1d27;
+        display: inline;
+        justify-content: right;
+        text-align: right;
         font-size: medium;
     }
 }
