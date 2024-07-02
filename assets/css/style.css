@@ -1,128 +1,176 @@
-header, main, .hard-skills, footer {
-    block-size: 60%;
-    display: block;
-    flex-direction: column;
-    justify-content: center;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+
+@font-face {
+    font-family: "Raleway Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Raleway-Regular.ttf) format("truetype");
 }
 
-header{
-    width: 60%;
+@font-face {
+    font-family: "Raleway Italic";
+    font-style: italic;
+    font-weight: 400;
+    src: url(../fonts/Raleway-Italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Raleway Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/Raleway-Bold.ttf) format("truetype");
+}
+
+/*************/
+/* Reset CSS */
+/*************/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/*************************/
+/* Déclarations globales */
+/*************************/
+a,
+a:active,
+a:visited {
+    text-decoration: none;
     color: white;
-    text-align: center;
-    img {
-        display: block;
-        margin: auto;
-        align-items: center;
-        background-image: #782221;
-        width : 100px;
-        height: 120px;
-    }
-    
-    figcaption{
-        color: white;
-        background-color: #782221;
-        text-align: center;
-        font-size: larger;
-    }
-
-    h1{
-        color: white;
-        background-color: #782221;
-        text-align: center;
-        font-size: large;
-    }
-
-    address a {
-        color: white;
-        background-color: #2c1d27;
-        display: inline;
-        justify-content: left;
-        text-align: left;
-        font-size: medium;
-    }
-    address a{
-        color: white;
-        background-color: #2c1d27;
-        display: inline;
-        justify-content: center;
-        text-align: center;
-        font-size: medium;
-    }
-    address a{
-        color: white;
-        background-color: #2c1d27;
-        display: inline;
-        justify-content: right;
-        text-align: right;
-        font-size: medium;
-    }
 }
-    
-main{
-    block-size: auto;
+
+header,
+main,
+footer {
+    width: 1160px;
+    margin: auto;
+    background-color: #782221;
+    color: white;
+    font-family: "Raleway Regular", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+}
+
+/*************************/
+/*         HEADER        */
+/*************************/
+header {
+    display: flex;
     flex-direction: column;
-    justify-content: left;
+    align-items: center;
+    text-align: center;
+}
+
+header figcaption {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    margin: 1rem auto;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 1rem #dbc2a4;
+    background-color: white;
+}
+
+
+
+
+h1,
+h2,
+h3 {
+    font-size: 1.3rem;
+}
+
+address {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1.5rem 1.7rem;
+    background-color: #2c1d27;
+}
+
+address a {
+    width: 25%;
+}
+
+address a {
     text-align: left;
-    display: table;
-    h2{
-        color: black;
-        background-color: #dbc2a4;
-        font-weight: bold;
-    }
-    p{
-        color: white;
-        background-color: #782221;
-        flex-direction: column;
-    }
-    
-   h3{
-        color: black;
-        font-size: medium;
-        font-weight: bold;
-    }
-    
-   ul{
-        color: white;
-        background-color: #782221;
-        flex-direction: column;
-    }
-    
-    aside {
-        width: 30%;
-    }
 }
-.hard-skills{
-    block-size: auto;
-    width: 35%;
-    display: table-cell;
-    flex-direction: column;
+
+address a {
+    text-align: right;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+aside {
+    flex-basis: 25%;
+    padding: 0.7rem;
+}
+
+aside article > *:not(h2) {
+    padding: 1rem 0;
+    padding-left: 1rem;
+    list-style-position: inside;
+}
+
+
+
+.hard-skills {
+    flex-basis: 70%;
+    border-right: 3px solid black;
+    padding: 0 1.2rem;
+    background-color: white;
+    color: black;
+}
+
+
+
+h2 {
+    color: black;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    background-color: #dbc2a4;
+    border-left: 0.4rem solid #782221;
+}
+
+footer {
+    padding: 0.7rem;
+}
+
+footer img {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
     justify-content: center;
-        ul{
-            color: black;
-            background-color: white;
-        }
+    align-items: center;
 }
-
-footer{
-    block-size: auto;
-    width: 60%;
-    display: inline;
-    float: inline-start;
-    text-align: center;
-    background-color: #782221;
-    img {
-        display: inline-block;
-        justify-content: center;
-        align-items: center;
-        background-color: #782221;
-        width: 35px;
-    }
-}
-
-footer small {
-    color: white;
-    background-color: #782221;
+    
+footer small{
     display: block;
-    justify-content: center;
-    text-align: center;
+    width: fit-content;
+    margin: 10px auto;
+    font-size:x-small;
 }
+
