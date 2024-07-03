@@ -1,176 +1,154 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
-
-@font-face {
-    font-family: "Raleway Regular";
-    font-style: normal;
-    font-weight: 400;
-    src: url(../fonts/Raleway-Regular.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: "Raleway Italic";
-    font-style: italic;
-    font-weight: 400;
-    src: url(../fonts/Raleway-Italic.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: "Raleway Bold";
-    font-style: normal;
-    font-weight: 700;
-    src: url(../fonts/Raleway-Bold.ttf) format("truetype");
-}
-
-/*************/
-/* Reset CSS */
-/*************/
-*,
-::before,
-::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    font-weight: normal;
-}
-
-/*************************/
-/* Déclarations globales */
-/*************************/
-a,
-a:active,
-a:visited {
-    text-decoration: none;
-    color: white;
-}
-
-header,
-main,
-footer {
+header, main, footer {
     width: 1160px;
     margin: auto;
-    background-color: #782221;
-    color: white;
-    font-family: "Raleway Regular", sans-serif;
+    font-family: "Raleway Regular";
 }
 
-h1,
-h2,
-h3 {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-}
-
-/*************************/
-/*         HEADER        */
-/*************************/
 header {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
     align-items: center;
+    color: white;
+    background-color: #782221;
+}
+
+header img{
+    display: flex;
+    margin: auto;
+    width : 150px; 
+    height : 150px;
+    border-radius: 55%;
+    padding: 1rem;
+}
+
+figcaption{
+    font-size: large;
+    margin: 19px;
+}
+
+h1{
+    font-size: larger;
     text-align: center;
 }
 
-header figcaption {
-    font-size: 1.5rem;
-    margin-bottom: 1.2rem;
-}
-
-header img {
-    width: 150px;
-    height: 150px;
-    margin: 1rem auto;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 1rem #dbc2a4;
-    background-color: white;
-}
-
-
-
-
-h1,
-h2,
-h3 {
-    font-size: 1.3rem;
-}
-
 address {
-    width: 100%;
+    color: white;
+    background-color: #2c1d27;
+    width: 94.5%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
-    padding: 1.5rem 1.7rem;
-    background-color: #2c1d27;
+    text-align: center;
+    padding: 2rem;
 }
 
 address a {
-    width: 25%;
+    color: white;
+    text-align: left;  
+    width: 15%; 
 }
 
 address a {
-    text-align: left;
+    color: white;
+    text-align: center;
+    width: 15%;
 }
 
 address a {
+    color: white;
     text-align: right;
+    width: 15%;
 }
 
 main {
-    display: flex;
+    display: table;
+    flex-direction: column;
     justify-content: space-between;
-}
+    text-align: left;
+    background-color: #782221;
+    color: white;
+    line-height: normal;
 
+    
+    h2 {
+        color: black;
+        background-color: #dbc2a4;
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        padding: 1rem;
+        font-size: medium;
+    }
+    
+    p{
+        padding: 1rem;
+    }
+    
+    main ul{
+        text-align: right;
+        color:black;
+        background-color: #782221;
+        font-size: small;
+    }
+}
 
 
 aside {
-    flex-basis: 25%;
-    padding: 0.7rem;
+    width: 30%;
 }
 
-aside article > *:not(h2) {
-    padding: 1rem 0;
-    padding-left: 1rem;
-    list-style-position: inside;
-}
-
-
-
-.hard-skills {
-    flex-basis: 70%;
-    border-right: 3px solid black;
-    padding: 0 1.2rem;
+.hard-skills{
+    display: table-cell;
+    margin: auto;
+    width: 55%;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    margin: auto;
+    color: black;
     background-color: white;
-    color: black;
+    padding: 1rem;
+    border-right: 4px solid black;
 }
 
-
-
-h2 {
-    color: black;
-    margin-bottom: 1rem;
-    padding-left: 0.5rem;
-    background-color: #dbc2a4;
-    border-left: 0.4rem solid #782221;
+.hard-skills h2 {
+    border-left: 0.5rem solid #782221;
 }
 
-footer {
-    padding: 0.7rem;
+h3{
+    text-align: left;
+    color: black;
+    font-size: medium;
+    padding: 1rem;
+}
+
+time {
+    color: black;
+    background-color: white;
+    text-align: left;
+    padding: 1rem;
+}
+
+    
+footer{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #782221;
+    color: white;
+    padding: 0.01rem;
+
 }
 
 footer img {
-    width: 2rem;
-    height: 2rem;
-    display: inline-block;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
-}
-    
-footer small{
-    display: block;
-    width: fit-content;
-    margin: 10px auto;
-    font-size:x-small;
+    width: 35px;
+    height: 35px;
 }
 
+footer small {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
